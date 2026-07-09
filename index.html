@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Website HTML and CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div id="logo-div">
+          <a class="logo" href="#"><img src="logo-top.png"></a>
+        </div>
+
+        <div id="menu-links-div">
+          <ul class="menu-links">
+            <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#our-service">Our Service</a></li>
+            <li><a href="#why-choose-us">Why Choose Us</a></li>
+            <li><a href="#our-team">Our Team</a></li>
+            <li><a href="#contact-us">Contact us</a></li>
+          </ul>
+          <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="content">
+        <h2>Start Your Day With Fresh Organic Fruits and Veggies</h2>
+        <p>
+          Our organic fruits and vegetables are grown and processed without synthetic pesticides, artificial fertilizers, or genetically modified organisms (GMOs). Instead of chemical inputs, our farmers use natural substances like manure and compost, relying on ecologically sustainable practices to build soil health and manage pests.
+        </p>
+        <button>Farm Online</button>
+      </div>
+    </section>
+
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      // Toggle mobile menu on hamburger button click
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      // Close mobile menu on close button click
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+    
+  </body>
+</html>

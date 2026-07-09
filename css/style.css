@@ -1,0 +1,183 @@
+/* Importing Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .logo img {
+  width: 150px;
+}
+
+.navbar ul li a:hover {
+  background-color: orange;
+  color: white;
+
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: green;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  float: right;
+}
+
+.hero-section {
+  height: 100vh;
+  background-image: url("../image/hero-1.jpg");
+  background-position: center 90px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-section .content {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: darkgreen;
+  background-color: rgba(0, 100, 0, .5);
+  border-radius: 10px;
+}
+
+.hero-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+  color: orange;
+  text-shadow: 7px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .content p {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.hero-section .content button {
+  background: #fff;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+  border-radius: 50px;
+}
+
+.hero-section .content button:hover {
+  color: #fff;
+  background: orange;
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+    
+  #hamburger-btn, #close-menu-btn {
+    display: block;
+    color: darkgreen;
+  }
+
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    max-width: 270px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: left 0.2s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content :is(h2, p) {
+    max-width: 100%;
+  }
+
+  .hero-section .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+  
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
